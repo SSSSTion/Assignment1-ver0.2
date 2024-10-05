@@ -1,6 +1,15 @@
 let slideIndex = 1;
+let jsonPath;
 
-fetch('../json/slides.json')
+// 如果在 GitHub Pages 上，则使用绝对路径
+if (window.location.hostname === "sssstion.github.io") {
+  jsonPath = "/BabyFactory/json/slides.json";
+} else {
+  // 本地开发环境中，使用相对路径
+  jsonPath = "../json/slides.json";
+}
+
+fetch(jsonPath)
   .then(response => {
     if (!response.ok) {
       throw new Error(`Network response was not ok: ${response.status}`); 
@@ -16,6 +25,8 @@ fetch('../json/slides.json')
   });
 
 function loadSlides(slides) {
+  console.log(slides); // 添加这一行来查看 slides 数据
+
   const carouselInner = document.getElementById('carousel-inner');
   const dotsContainer = document.querySelector('.dots-container');
 
@@ -48,6 +59,8 @@ function currentSlide(n) {
 }
 
 function showSlides(n) {
+  console.log(slideIndex); // 添加这一行来查看当前幻灯片索引
+
   let i;
   const slides = document.getElementsByClassName("carousel-item");
   const dots = document.getElementsByClassName("dot");
