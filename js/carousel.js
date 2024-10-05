@@ -3,7 +3,7 @@ let jsonPath;
 
 // 如果在 GitHub Pages 上，则使用绝对路径
 if (window.location.hostname === "sssstion.github.io") {
-  jsonPath = "/BabyFactory/json/slides.json";
+  jsonPath = "/Assignment1-ver0.2/json/slides.json";
 } else {
   // 本地开发环境中，使用相对路径
   jsonPath = "../json/slides.json";
