@@ -1,11 +1,11 @@
 let slideIndex = 1;
 let jsonPath;
 
-// 如果在 GitHub Pages 上，则使用绝对路径
+// when using GitHub Pages，use absolute path
 if (window.location.hostname === "sssstion.github.io") {
   jsonPath = "https://sssstion.github.io/Assignment1-ver0.2/json/slides.json";
 } else {
-  // 本地开发环境中，使用相对路径
+  // when in my pc,use relative path
   jsonPath = "./json/slides.json";
 }
 
@@ -14,24 +14,25 @@ fetch(jsonPath)
     if (!response.ok) {
       throw new Error(`Network response was not ok: ${response.status}`); 
     }
-    return response.json(); // 如果响应正常，解析为JSON
+    return response.json(); // if response is ok,return json
   })
   .then(data => {
-    loadSlides(data.slides); // 确保传递的是 slides 数组
-    showSlides(slideIndex); // 初次显示幻灯片
+    loadSlides(data.slides); // load the slides
+    showSlides(slideIndex); // show slide firstly
+    autoSlide(); // start up auto change
   })
   .catch(error => {
-    console.error('Error loading slides:', error); // 捕获并处理任何错误
+    console.error('Error loading slides:', error); // catch and display the error report
   });
 
 function loadSlides(slides) {
-  console.log(slides); // 添加这一行来查看 slides 数据
+  console.log(slides); // check slides.json data
 
   const carouselInner = document.getElementById('carousel-inner');
   const dotsContainer = document.querySelector('.dots-container');
 
   slides.forEach((slide, index) => {
-    // 创建每个幻灯片的div
+    // create the div of every slide
     const slideDiv = document.createElement('div');
     slideDiv.className = `carousel-item ${index === 0 ? 'active' : ''}`;
     slideDiv.innerHTML = `
@@ -40,7 +41,7 @@ function loadSlides(slides) {
     `;
     carouselInner.appendChild(slideDiv);
 
-    // 创建导航点
+    // create the dot
     const dot = document.createElement('span');
     dot.className = 'dot';
     dot.onclick = function () {
@@ -59,13 +60,13 @@ function currentSlide(n) {
 }
 
 function showSlides(n) {
-  console.log(slideIndex); // 添加这一行来查看当前幻灯片索引
+  console.log(slideIndex); // check the index
 
   let i;
   const slides = document.getElementsByClassName("carousel-item");
   const dots = document.getElementsByClassName("dot");
 
-  // 循环到第一张或最后一张
+  // untill the last one or first one
   if (n > slides.length) {
     slideIndex = 1;
   }
@@ -73,17 +74,25 @@ function showSlides(n) {
     slideIndex = slides.length;
   }
 
-  // 隐藏所有幻灯片（通过移除active类）
+  // hide all the slides（through remote active）
   for (i = 0; i < slides.length; i++) {
     slides[i].classList.remove("active");
   }
 
-  // 移除所有点的active类
+  // replce all dots' active
   for (i = 0; i < dots.length; i++) {
     dots[i].className = dots[i].className.replace(" active", "");
   }
 
-  // 显示当前幻灯片（通过添加active类）
+  // display current slide（through add active）
   slides[slideIndex - 1].classList.add("active");
   dots[slideIndex - 1].className += " active";
+}
+
+// change carousel automatically
+function autoSlide() {
+  setInterval(function() {
+    slideIndex++;
+    showSlides(slideIndex);
+  }, 4000); // 4s once
 }
