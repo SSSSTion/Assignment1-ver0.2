@@ -1,0 +1,19 @@
+{
+    "slides": [
+        {
+            "image": "../picture/006pPEeXgy1hidoq4nmg1j30u00u0wk0.jpg",
+            "alt": "Image 1",
+            "caption": "This is the first image caption"
+        },
+        {
+            "image": "../picture/006pPEeXgy1hidoq4nmg1j30u00u0wk0.jpg",
+            "alt": "Image 2",
+            "caption": "This is the second image caption"
+        },
+        {
+            "image": "../picture/006pPEeXgy1hidoq4nmg1j30u00u0wk0.jpg",
+            "alt": "Image 3",
+            "caption": "This is the third image caption"
+        }
+    ]
+}

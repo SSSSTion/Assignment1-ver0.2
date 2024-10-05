@@ -1,0 +1,173 @@
+  .middle-container {
+    display: flex;
+    align-items: flex-start;
+    width: 100%;
+  }
+
+  .url-list1 {
+    background-color: #6d5d5515;
+    border-radius: 8px;
+    padding-left: 10px;
+    padding-right: 10px;
+    width: 17%;
+    margin: 1%;
+    height: 300px;
+    position: relative;
+  }
+
+  .url-list1 a {
+    text-decoration: none;
+    font-size: 10px;
+  }
+
+  .prev, .next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%); 
+    background-color: rgba(23, 12, 12, 0.5);
+    padding:8px; 
+    cursor: pointer;
+  }
+
+  .prev {
+    left: 5px;
+  }
+
+  .next {
+    right: 5px; 
+  }
+
+  .carousel-item {
+    display: none; /* 隐藏所有幻灯片，JavaScript 将显示当前幻灯片 */
+    opacity: 0; /* 设置初始透明度为 0 */
+    transition: opacity 1s; /* 添加淡入淡出效果 */
+    width: 100%; /* 确保幻灯片的宽度适应 */
+    height: 300px; /* 确保幻灯片有高度 */
+  }
+
+  .carousel-item img {
+    width: 100%; /* 确保图片自适应容器宽度 */
+    height: 100%; /* 确保图片占满整个容器 */
+    object-fit: cover; /* 保持图片比例并填满容器 */
+  }
+  
+  .carousel-item.active {
+    display: block; /* 显示当前活动的幻灯片 */
+    opacity: 1;    /* 设置活动幻灯片的透明度为 1 */
+  }
+
+  .dots-container {
+    text-align: center;
+    position: absolute;
+    bottom: 1px;
+    width: 89%;
+  }
+  
+  .dot {
+    height: 12px;
+    width: 12px;
+    margin: 0 5px;
+    background-color: #dcd6d6;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+  }
+  
+  .active, .dot:hover {
+    background-color: #5a5959;
+  }
+
+  .url-list2 {
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    width: 60%;
+    margin: 1%;
+    height: 300px;
+    box-sizing: border-box;
+}
+  
+  .url-list2-links {
+    background-color: #6d5d5515;
+    border-radius: 8px;
+    display: flex; 
+    justify-content: center; 
+  }
+
+  .links-split-line::before{
+    content: "|";
+    margin-left: 15px;
+    margin-right: 15px;
+    float: left;
+  }
+  .links-split-line:first-child:before{
+    display: none;
+  }
+  
+  .url-list2 a {
+    text-decoration: none;
+    color: red;
+    font-size: 15px;
+    padding-top: 8px;
+    padding-bottom: 8px;
+  }
+  
+  .login {
+    display: flex;
+    flex-direction: column;
+    background-color: #6d5d5515;
+    border-radius: 8px;
+    width: 17%;
+    margin: 1%;
+    height: 300px;
+  }
+  
+  #login-btn {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 20%;
+    width: 40%;
+    background-color: aqua;
+    border-radius: 8px;
+    margin-left: 30%;
+    margin-top: 10%;
+    margin-bottom: 8%;
+  }
+
+  #login-btn span {
+    display: block;
+    text-align: center;
+  }
+
+  #login-welcome{
+    width: 90%;
+    margin: 2%;
+  }
+  
+  #login-picture {
+    height: 45%;
+    width: 90%;
+    border-radius: 8px;
+    margin-left: 5%;
+    margin-top: 2%;
+    margin-bottom: 2%;
+  }
+  
+  .ad-container {
+    flex-grow: 1; 
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    margin-top: 10px;
+}
+
+.ad-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; 
+    border-radius: 8px;
+}

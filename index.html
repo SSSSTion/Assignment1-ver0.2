@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="./css/style.css">
+        <link rel="stylesheet" href="./css/middle-style.css">
+        <link rel="stylesheet" href="./css/underStyle.css">
+        <link rel="stylesheet" href="./font/font_mhg2rr44zbr/iconfont.css">
+        <link rel="stylesheet" href="./font/font_sc2rw3g5qzg/iconfont.css">
+    </head>
+    
+    <body>
+        <div class="search-container">
+            <img src="picture/110483852_p0_master1200.jpg" alt="logo" class="top-left-image"> 
+            <input type="text" id="search-input" placeholder="Please enter the content">
+            <button id="search-btn"><span class="iconfont icon-sousuo"></span></button>
+        </div>
+
+        <div class="middle-container">
+
+          <div class="url-list1">
+            <div id="carousel-inner"></div>
+          
+            <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+            <a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+            <div class="dots-container"></div>
+
+          </div>
+
+            <span class="url-list2">
+              <div class="url-list2-links">
+                <a class="links-split-line" href="#">Home</a>
+                <a class="links-split-line" href="#">Rooms &amp; Rates</a>
+                <a class="links-split-line" href="#">Dining</a>
+                <a class="links-split-line" href="#">Attractions</a>
+                <a class="links-split-line" href="#">Directions</a>
+                <a class="links-split-line" href="#">Contact Us</a>
+              </div>
+          
+              <div class="ad-container">
+                <img src="picture/110483852_p0_master1200.jpg" alt="description of image">
+              </div>
+            </span>
+            <span class="login">
+              <h3 id="login-welcome">Welcome! Please login:</h3>
+              <button onclick="window.location.href='./secondPages/loginPage.html'" type="button" id="login-btn">
+                <span class="iconfont icon-denglu"></span>
+                <span style="font-size: 15px;">login</span>
+              </button>
+              <img src="picture/110483852_p0_master1200.jpg" alt="login picture" id="login-picture">
+            </span>
+          
+        </div>
+
+        <div class="pictures" id = "pictures-container">
+          <div class="picture-item">
+            <img src="picture/110483852_p0_master1200.jpg" alt="things">
+            <a href="http://">图片一</a>
+          </div>
+          <div class="picture-item">
+            <img src="picture/110483852_p0_master1200.jpg" alt="things">
+            <a href="http://">图片二</a>
+          </div>
+          <div class="picture-item">
+            <img src="picture/110483852_p0_master1200.jpg" alt="things">
+            <a href="http://">图片三</a>
+          </div>
+          <div class="picture-item">
+            <img src="picture/110483852_p0_master1200.jpg" alt="things">
+            <a href="http://">图片四</a>
+          </div>
+          <div class="picture-item">
+            <img src="picture/110483852_p0_master1200.jpg" alt="things">
+            <a href="http://">图片五</a>
+          </div>
+          <div class="picture-item">
+            <img src="picture/110483852_p0_master1200.jpg" alt="things">
+            <a href="http://">图片六</a>
+          </div>
+          <div class="picture-item">
+            <img src="picture/110483852_p0_master1200.jpg" alt="things">
+            <a href="http://">图片五</a>
+          </div>
+        </div>
+
+        <div id="results"></div>
+
+        <script src="./js/carousel.js"></script>
+        <script src="./js/search.js"></script>
+
+    </body>
+</html>

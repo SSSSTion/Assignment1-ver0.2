@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="../css/style.css">
+        <link rel="stylesheet" href="../font/font_mhg2rr44zbr/iconfont.css">
+        <link rel="stylesheet" href="../css/productStyle.css">
+        <script src="../js/displayPicture.js"></script>
+    </head>
+    <body>
+        <div class="search-container">
+            <img src="../picture/110483852_p0_master1200.jpg" alt="logo" class="top-left-image"> 
+            <input type="text" id="search-input" placeholder="Please enter the content">
+            <button id="search-btn"><span class="iconfont icon-sousuo"></span></button>
+        </div>
+
+        <div class="business">
+            <img src="../picture/110483852_p0_master1200.jpg" alt="logo" class="business-image"> 
+            <h4 style="margin: 10px;">business name</h4>
+            <button id="business-btn">Enter</button>
+        </div>
+
+        <div class="product-container">
+            <span class="choose-picture">
+                <button id="picture1" data-image="../picture/107172992_p0.png"></button>
+                <button id="picture2" data-image="../picture/006pPEeXgy1hidoq4nmg1j30u00u0wk0.jpg"></button>
+                <button id="picture3" data-image="../picture/846a74ca-26c4-4e53-84fd-0636623bae7c.jpg"></button>
+                <button id="picture4" data-image="../picture/105137689_p0.png"></button>
+                <button id="picture5" data-image="../picture/112157081_p2_master1200.jpg"></button>
+            </span>
+            <img src="../picture/107172992_p0.png" alt="bigPicture" class="display-picture" id="display-picture">
+            <span class="information">
+                <h3>The name of the product and some details</h3>
+                <p>Price: $299.00</p>
+                <form class="product-form">
+                    <label for="address">Choose Delivery Address:</label>
+                    <select id="address" name="address">
+                        <option value="beijing">Beijing</option>
+                        <option value="shanghai">Shanghai</option>
+                        <option value="guangzhou">Guangzhou</option>
+                        <option value="shenzhen">Shenzhen</option>
+                    </select>
+
+                    <label for="style">Choose Style:</label>
+                    <select id="style" name="style">
+                        <option value="black">Black</option>
+                        <option value="white">White</option>
+                        <option value="red">Red</option>
+                    </select>
+
+                    <label for="quantity">Quantity:</label>
+                    <input type="number" id="quantity" name="quantity" value="1" min="1">
+
+                    <button type="submit" class="submit-btn">Add to Cart</button>
+                </form>
+            </span>
+        </div>
+        
+    </body>
+</html>

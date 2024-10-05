@@ -1,0 +1,40 @@
+body {
+	margin: 0 auto;
+	width: 100%;
+    background-color: lemonchiffon;
+	max-width: 1480px;
+	min-width: 1140px;
+}
+
+.top-left-image{
+    top: 30px;
+    width: 8%;
+    height: 8%;
+}
+
+.search-container {
+    display: flex;
+    align-items: center;
+    margin-left: 1%;
+    margin-top: 30px;
+    margin-bottom: 10px;
+}
+
+#search-input {
+    padding: 15px;
+    margin-left: 10px;
+    width: 70%;
+    font-size: 20px;
+    border-radius: 8px;
+}
+
+#search-btn {
+    margin-left: 5px;
+    padding: 15px 25px;
+    background-color: pink;
+    border: 2px;
+    border-style: solid;
+    border-color: plum;
+    height: 55px;
+    border-radius: 8px;
+}
