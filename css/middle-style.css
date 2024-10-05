@@ -123,7 +123,7 @@
     content: "|";
     color: #ff0000;
     position: absolute;
-    left: -5px;
+    left: -15px;
     top: 50%;
     transform: translateY(-50%);
   }
@@ -136,10 +136,6 @@
     background-color: #ff6600;
     color: #fff;
     font-weight: bold;
-  }
-
-  .url-list2-links a:first-child {
-    padding-left: 0;
   }
 
   .login {
