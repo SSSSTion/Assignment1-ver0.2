@@ -3,10 +3,10 @@ let jsonPath;
 
 // 如果在 GitHub Pages 上，则使用绝对路径
 if (window.location.hostname === "sssstion.github.io") {
-  jsonPath = "/Assignment1-ver0.2/json/slides.json";
+  jsonPath = "https://sssstion.github.io/Assignment1-ver0.2/json/slides.json";
 } else {
   // 本地开发环境中，使用相对路径
-  jsonPath = "../json/slides.json";
+  jsonPath = "./json/slides.json";
 }
 
 fetch(jsonPath)
@@ -73,9 +73,9 @@ function showSlides(n) {
     slideIndex = slides.length;
   }
 
-  // 隐藏所有幻灯片
+  // 隐藏所有幻灯片（通过移除active类）
   for (i = 0; i < slides.length; i++) {
-    slides[i].style.display = "none";
+    slides[i].classList.remove("active");
   }
 
   // 移除所有点的active类
@@ -83,7 +83,7 @@ function showSlides(n) {
     dots[i].className = dots[i].className.replace(" active", "");
   }
 
-  // 显示当前幻灯片，并为相应的点添加active类
-  slides[slideIndex - 1].style.display = "block";
+  // 显示当前幻灯片（通过添加active类）
+  slides[slideIndex - 1].classList.add("active");
   dots[slideIndex - 1].className += " active";
 }

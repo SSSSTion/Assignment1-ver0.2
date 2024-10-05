@@ -1,19 +1,19 @@
 {
     "slides": [
         {
-            "image": "../picture/006pPEeXgy1hidoq4nmg1j30u00u0wk0.jpg",
+            "image": "./picture/006pPEeXgy1hidoq4nmg1j30u00u0wk0.jpg",
             "alt": "Image 1",
-            "caption": "This is the first image caption"
+            "caption": ""
         },
         {
-            "image": "../picture/006pPEeXgy1hidoq4nmg1j30u00u0wk0.jpg",
+            "image": "./picture/fabe9b663b7d5a7c86091461d8230d22463153.gif",
             "alt": "Image 2",
-            "caption": "This is the second image caption"
+            "caption": ""
         },
         {
-            "image": "../picture/006pPEeXgy1hidoq4nmg1j30u00u0wk0.jpg",
+            "image": "./picture/GSviMHOasAAGFQz.jpg",
             "alt": "Image 3",
-            "caption": "This is the third image caption"
+            "caption": ""
         }
     ]
 }
